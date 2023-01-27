@@ -1,0 +1,1 @@
+/home/dev28/Documents/Django_projects/firstwebsite/home/static/home/image
