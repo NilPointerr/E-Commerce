@@ -9,6 +9,8 @@ urlpatterns = [
     path('contact',views.contact,name = 'contact'),
     path('about',views.about,name = 'about'),
     path('service',views.service,name = 'service'),
-    path('login',views.login,name='login')
+    path('login',views.login,name='login'),
+    path('logout',views.logout,name='logout'),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-# /home/dev28/Documents/Django_projects/firstwebsite/static/earbuds.jpeg
+

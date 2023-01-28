@@ -1,9 +1,13 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 from datetime import datetime
 from home.models import Contact,Login
 from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,logout
 
 def homepage(request):
+    # if request.User.is_anonymous:
+    #     return redirect('/login')
     return render(request,'index.html')
     # return HttpResponse("this is homepage")
 def contact(request):
@@ -27,13 +31,31 @@ def about(request):
     # return HttpResponse("this is about page")
 def login(request):
     if request.method =='POST':
-        Email = request.POST['Email']
+        Name = request.POST['Name']
+        # print(Name)
         password = request.POST['password']
-        login =Login(Email = Email, password = password)
+        # print(password)
+        login =Login(Name = Name, password = password)
+        # print(Login(Name = Name, password = password))
+    
         login.save()
+        print('@#$%#@@@$$@@@@@@@@@@@@@@')
         messages.success(request, 'your login is succesfull')
 
+        # user = authenticate(username=Email, password=password)
+        # print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+        # if user is not None:
+        #     print()
+        #     return redirect('/index')
+        #      # A backend authenticated the credentials
+        # else:
+        #     return render(request,'login.html')
+
+        #      # No backend authenticated the credentials
     return render(request,'login.html')
 
+def logout(request):
+    logout(request) 
+    return render(request,'login.html')
 
     

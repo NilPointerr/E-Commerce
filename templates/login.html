@@ -3,32 +3,37 @@
 {% block title %}About{% endblock title %}
 
 {% block body %}
-<div class = 'container'>
-    <form   method = 'POST' action = '/login' id = 'log_in'>
-        {% csrf_token %}
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example1">Email address</label>
-            <input type="Email" id="Email" name = 'Email' class="form-control" />
-        </div>
-      
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example2">Password</label>
-            <input type="password" id="password" name ='password' class="form-control" />
-          
-        </div>
 
-        <div class="form-outline mb-4">
-            <button type="submit" class="btn btn-primary">Submit</button><button type="submit" class="btn btn-danger">Forgot password</button>
-           
-          </div>
-        
-        </div>
-      </form>
-      <script>
-        $("log_in").on('submit', function(event) {
-              alert("New Dog Added");}
-        </script>
+
+<div class='container'>
+  <form method='POST' action='/login' id='log_in'>
+    {% csrf_token %}
+    <!-- Name input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example1">Name</label>
+      <input type="text" id="Name" name='Name' class="form-control" />
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example2">Password</label>
+      <input type="password" id="password" name='password' class="form-control" />
+
+    </div>
+
+    <div class="form-outline mb-4">
+      <button type="submit" class="btn btn-primary">Submit</button><button type="Forgot" class="btn btn-danger">Forgot
+        password</button>
+
+    </div>
+
+</div>
+</form>
+{% comment %}
+<script>
+  $("log_in").on('submit', function (event)) {
+    alert("New Dog Added")
+  }
+</script> {% endcomment %}
 </div>
 {% endblock body %}

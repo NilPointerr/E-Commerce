@@ -5,36 +5,35 @@
 {% block body %}
 
 <div class='container'>
-    <h2 class='text-center'><b> Contact Us</b></h2>
- </div>
-<div class= 'container'>
-    <form method= 'post' action='/contact' >
-        {% csrf_token %}
-        <div class="form-group">
-          <label for="exampleInputEmail1">Name</label>
-          <input type="Name" class="form-control" id="name" name ="name" placeholder="Enter name">
-        </div>
+  <h2 class='text-center'><b> Contact Us</b></h2>
+</div>
+<div class='container'>
+  <form method='post' action='/contact'>
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="Name" class="form-control" id="name" name="name" placeholder="Enter name">
+    </div>
 
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" name= "email" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
 
-        <div class="form-group">
-          <label for="mobile">Mobile no</label>
-          <input type="phone" class="form-control" id="mobile" name ="mobile"placeholder="enter your mobile no">
-        </div>  
+    <div class="form-group">
+      <label for="mobile">Mobile no</label>
+      <input type="phone" class="form-control" id="mobile" name="mobile" placeholder="enter your mobile no">
+    </div>
 
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Drop your issue Here!</label>
-            <textarea class="form-control" id="desc" name = 'desc'rows="3"></textarea>
-          </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Drop your issue Here!</label>
+      <textarea class="form-control" id="desc" name='desc' rows="3"></textarea>
+    </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button><button type="submit" class="btn btn-danger">Reset</button>
-    </form>
-</div>  
+    <button type="submit" class="btn btn-primary">Submit</button><button type="submit"
+      class="btn btn-danger">Reset</button>
+  </form>
+</div>
 
 {% endblock body %}
-
-
