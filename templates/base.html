@@ -30,32 +30,41 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about">About Us</a>
+            <a class="nav-link" href="/about">Subscribe ME</a>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="/service" role="button" data-bs-toggle="dropdown"
-              aria-haspopup='true' aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Category
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Phones</a></li>
-              <li><a class="dropdown-item" href="#">Laptops</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">TVs</a></li>
-            </ul>
-          </li>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/mobiles">Mobiles</a>
+              <a class="dropdown-item" href="/laptop">Laptops</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/login_detail">Login_detail</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/contact">Contact Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
+          <li class="nav-item" >
+            <a class="nav-link" href="/login">
+              <button type="button" class="btn btn-success"style="
+              POSITION: ABSOLUTE;
+              right: 2px;
+              top: 8px;">Login</button></a>
+          </li>
+          <li class="nav-item" style='position:absolute; right:70px;'>
+            <button type="button" class="btn btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+</svg>
+              Cart
+            </button>
           </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex" role="search" style='position: absolute;
+        right: 170px;'>
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
@@ -80,7 +89,7 @@
 
   {% if messages %}
   {% for message in messages %}
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
     <strong>{{ message }}</strong>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>

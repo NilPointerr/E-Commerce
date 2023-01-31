@@ -6,18 +6,19 @@
 
 
 <div class='container'>
+  <h3 align = 'center' style="background-color:powderblue;margin-top:50px;">Login Here</h3>
   <form method='POST' action='/login' id='log_in'>
     {% csrf_token %}
     <!-- Name input -->
     <div class="form-outline mb-4">
       <label class="form-label" for="form2Example1">Name</label>
-      <input type="text" id="Name" name='Name' class="form-control" />
+      <input type="text" id="Name" name="Name" class="form-control" required/>
     </div>
 
     <!-- Password input -->
     <div class="form-outline mb-4">
       <label class="form-label" for="form2Example2">Password</label>
-      <input type="password" id="password" name='password' class="form-control" />
+      <input type="password" id="password" name="password" class="form-control" required/>
 
     </div>
 
@@ -29,11 +30,5 @@
 
 </div>
 </form>
-{% comment %}
-<script>
-  $("log_in").on('submit', function (event)) {
-    alert("New Dog Added")
-  }
-</script> {% endcomment %}
 </div>
 {% endblock body %}

@@ -9,8 +9,12 @@ urlpatterns = [
     path('contact',views.contact,name = 'contact'),
     path('about',views.about,name = 'about'),
     path('service',views.service,name = 'service'),
-    path('login',views.login,name='login'),
+    path('login',views.loginuser,name='login'),
     path('logout',views.logout,name='logout'),
+    path('mobiles',views.mobiles,name='mobiles'),
+    path('laptop',views.laptop,name='laptop'),
+    path('login_detail',views.viewdata,name='login_detail')
+    
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
