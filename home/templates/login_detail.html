@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}login_detail{% endblock title %}
+
+{% block body %}  
+<div class = 'container'>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for i in object_list%}
+    <tr>
+      <td>{{i.Name}}</td>
+      <td>{{i.password}}</td>
+    </tr>
+    {%endfor%}
+  
+</table>
+</div>
+
+{% endblock body %}
